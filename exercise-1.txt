@@ -35,6 +35,7 @@
         INCREMENT "mesin_cuci"
   END WHILE
 
+  DISPLAY "Nyalakan Mesin"
 
 /********************
   No 4. Periksa Kuku
