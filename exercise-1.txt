@@ -4,8 +4,9 @@
 
   STORE "mass" with 600
   STORE "a" with 2
+  STORE "force" with any number
   CALCULATE "mass" times "a"
-  STORE "force" with calculation result  
+  SET "force" to calculation result  
 
   DISPLAY "force"
 
@@ -17,12 +18,9 @@
   STORE "tahun" with a number
   STORE "kabisat" with false
 
-  IF "tahun" mod 100 equals 0
-     IF "tahun" mod 4 equals 0
-        SET "kabisat" to true
-  ELSE
-     IF "tahun" mod 4 equals 0
-        SET "kabisat" to true
+  IF "tahun" mod 400 EQUAL to 0 OR "tahun" mod 100 NOT EQUAL to 0 AND "tahun" mod 4 EQUAL to 0
+     SET "kabisat" to true
+  END IF
 
   DISPLAY "kabisat"
 
@@ -34,7 +32,7 @@
   STORE "mesin_cuci" with 0
   
   WHILE "mesin_cuci" < 20
-     ADD "mesin_cuci" by 1
+        INCREMENT "mesin_cuci"
   END WHILE
 
 
@@ -43,14 +41,16 @@
 ********************/
 
   STORE "murid" with 40
-  STORE "murid.kukupanjang" with true or false
+  STORE "murid.kukupanjang" with any boolean
 
   WHILE "murid" > 0
-     IF "murid.kukupanjang" equals true
-        DISPLAY "hukum murid"
-     ELSE
-        DISPLAY "puji murid"
-     SUBSTRACT "murid" by 1
+        IF "murid.kukupanjang" equals true
+           DISPLAY "hukum murid"
+        ELSE
+           DISPLAY "puji murid"
+        END IF
+
+        SUBSTRACT 1 from "murid"
   END WHILE
 
 
