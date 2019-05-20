@@ -5,7 +5,7 @@
   STORE "mass" with 600
   STORE "a" with 2
   CALCULATE "mass" times "a"
-  STORE "force" to calculation result  
+  STORE "force" with calculation result  
 
   DISPLAY "force"
 
@@ -24,7 +24,7 @@
      IF "tahun" mod 4 equals 0
         SET "kabisat" to true
 
-  DISPLAY kabisat
+  DISPLAY "kabisat"
 
 
 /*******************
@@ -34,7 +34,7 @@
   STORE "mesin_cuci" with 0
   
   WHILE "mesin_cuci" < 20
-     CALCULATE "mesin_cuci" add 1
+     ADD "mesin_cuci" by 1
   END WHILE
 
 
@@ -50,7 +50,7 @@
         DISPLAY "hukum murid"
      ELSE
         DISPLAY "puji murid"
-     CALCULATE "murid" substract 1
+     SUBSTRACT "murid" by 1
   END WHILE
 
 
