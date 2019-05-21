@@ -6,13 +6,12 @@ var konversiMenit = (menit) => {
     var jam = (menit - sisaMenit) / 60;
     var menitBaru = "";
 
-    if(sisaMenit < 60) {
-        if(sisaMenit < 10) {
-            menitBaru = "0" + sisaMenit;
-        } else {
-            menitBaru += sisaMenit;
-        }
+    if(sisaMenit < 10) {
+        menitBaru = "0" + sisaMenit;
+    } else {
+        menitBaru += sisaMenit;
     }
+    
     return jam + ":" + menitBaru;
 }
 
